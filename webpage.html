@@ -1,0 +1,267 @@
+<html>
+<header><a href="https://www.percoyo.com"><img width=100px src="logo.png"/></a></header>
+<title>Sample Webpage</title>
+<body>
+ 	<br><br>
+	<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">
+<div align="right">
+	<form style="background-color:#808080" name="webpage" onsubmit="return check()" method="post"><br>
+	<table>
+		<tr>
+		<td align="right" color="white">First Name:</td>
+		<td align="left"><input type="text" name="Name"/></td>
+		</tr>
+		<td align="right">Email:&emsp;&emsp;</td> 
+		<td align="left"><input type="email" name="Email"/></td>
+		</tr>
+		<td align="right">Phone:&emsp;&emsp;</td> 
+		<td align="left"><input type="text" name="Phone"/></td>
+		</tr>
+		<td align="right">Description:</td> 
+		<td align="left"><input type="text" name="Desc"/></td>
+		</tr>
+	</table>
+		<br><button>Submit</button>&emsp;&emsp;&emsp;&emsp;&emsp;
+	</form>
+	</div>
+</div>
+    <img src="img1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"><div align="right">
+	<form style=background-color:#808080 name="webpage" onsubmit="return check()" method="post"><br>
+	<table>
+		<tr>
+		<td align="right" color="white">First Name:</td>
+		<td align="left"><input type="text" name="Name"/></td>
+		</tr>
+		<td align="right">Email:&emsp;&emsp;</td> 
+		<td align="left"><input type="email" name="Email"/></td>
+		</tr>
+		<td align="right">Phone:&emsp;&emsp;</td> 
+		<td align="left"><input type="text" name="Phone"/></td>
+		</tr>
+		<td align="right">Description:</td> 
+		<td align="left"><input type="text" name="Desc"/></td>
+		</tr>
+	</table>
+		<br><button>Submit</button>&emsp;&emsp;&emsp;&emsp;&emsp;
+	</form>
+	</div></div>
+    <img src="img2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"><div align="right">
+	<form style=background-color:#808080 name="webpage" onsubmit="return check()" method="post"><br>
+	<table>
+		<tr>
+		<td align="right" color="white">First Name:</td>
+		<td align="left"><input type="text" name="Name"/></td>
+		</tr>
+		<td align="right">Email:&emsp;&emsp;</td> 
+		<td align="left"><input type="email" name="Email"/></td>
+		</tr>
+		<td align="right">Phone:&emsp;&emsp;</td> 
+		<td align="left"><input type="text" name="Phone"/></td>
+		</tr>
+		<td align="right">Description:</td> 
+		<td align="left"><input type="text" name="Desc"/></td>
+		</tr>
+	</table>
+		<br><button>Submit</button>&emsp;&emsp;&emsp;&emsp;&emsp;<br>
+	</form>
+	</div></div>
+    <img src="img3.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+</div>
+
+</body>
+</html>
+
+<script>
+function check(){
+var name = document.forms.webpage.Name.value;
+var email = document.forms.webpage.Email.value;
+var phone = document.forms.webpage.Phone.value;
+var desc = document.forms.webpage.Desc.value;
+
+var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  
+var regPhone=/^\d{10}$/;                                        
+var regName = /\d+$/g;
+
+if (name == "" || regName.test(name)) {
+        window.alert("Please enter your name properly, "+name);
+        
+        return false;
+}
+
+if (email == "" || !regEmail.test(email)) {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+}
+
+if (phone == "" || !regPhone.test(phone)) {
+        alert("Please enter valid phone number.");
+        phone.focus();
+        return false;
+}
+
+if (desc == "" || regName.test(name)) {
+        window.alert("Please enter a description.");
+        desc.focus();
+        return false;
+}
+
+alert("First name: "+name);
+alert("Email: "+email);
+alert("Phone: "+phone);
+alert("Description: "+desc);
+}
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<style>
+button {
+	background: #016ABC;
+	color: #fff;
+	padding: 15px 32px;
+  	text-align: center;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 3px 3px 3px #eee;
+	text-shadow: none;
+}
+
+button:hover {
+	background: #B9DFFF;
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #eee;
+	text-shadow: none;
+}
+
+.slideshow-container {
+  max-width: 2000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top:200;
+  right: 200;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+body{
+color:white;
+
+form{
+padding: 10px;}
+
+</style>
