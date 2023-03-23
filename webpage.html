@@ -1,0 +1,321 @@
+<html>
+<head>
+
+    <a href="https://www.percoyo.com"><img class="logo" src="logo.png"/></a>
+    
+  <style>
+    .logo{
+      cursor: pointer;
+      padding: 3px; 
+      width: 80px;
+    }
+    button {
+      cursor: pointer;
+      background: #016ABC;
+      color: #fff;
+      padding: 15px 32px;
+      text-align: center;
+      border: 1px solid #eee;
+      border-radius: 20px;
+      box-shadow: 3px 3px 3px #eee;
+      text-shadow: none;
+    }
+    
+    button:hover {
+      background: #B9DFFF;
+      color: #fff;
+      border: 1px solid #eee;
+      border-radius: 20px;
+      box-shadow: 5px 5px 5px #eee;
+      text-shadow: none;
+    }
+    
+    .slideshow-container {
+      max-width: 2000px;
+      position: relative;
+      margin: auto;
+    }
+    
+    .mySlides { display: none; }
+    
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .submit{ cursor: pointer; }
+
+    .pos {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top:150;
+      right: 200;
+      z-index: 2;
+    }
+    
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+    
+    body{ color:white; }
+    
+    form{ padding: 10px; }
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333333;
+    }
+
+    li { float: left; }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #111111;
+      color: dodgerblue;
+    }
+
+</style>
+
+</head>
+<title>Sample Webpage</title>
+<body>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <div class="slideshow-container">
+  <div class="mySlides fade">
+    <!--<div class="pos">
+<div align="right">
+	<form style="background-color:#808080" name="webpage" onsubmit="return check()" method="post"><br>
+	<table>
+		<tr>
+		<td align="right" color="white">First Name:</td>
+		<td align="left"><input type="text" name="Name"/></td>
+		</tr>
+		<td align="right">Email:&emsp;&emsp;</td> 
+		<td align="left"><input type="email" name="Email"/></td>
+		</tr>
+		<td align="right">Phone:&emsp;&emsp;</td> 
+		<td align="left"><input type="text" name="Phone"/></td>
+		</tr>
+		<td align="right">Description:</td> 
+		<td align="left"><input type="text" name="Desc"/></td>
+		</tr>
+	</table>
+		<br><button>Submit</button>&emsp;&emsp;&emsp;&emsp;&emsp;
+	</form>
+	</div>
+</div>-->
+    <img src="img1.jpg" style="width:100%; margin-top: 5px;">
+  </div>
+
+  <div class="mySlides fade">
+    <!--<div class="pos"><div align="right">
+	<form style=background-color:#808080 name="webpage" onsubmit="return check()" method="post"><br>
+	<table>
+		<tr>
+		<td align="right" color="white">First Name:</td>
+		<td align="left"><input type="text" name="Name"/></td>
+		</tr>
+		<td align="right">Email:&emsp;&emsp;</td> 
+		<td align="left"><input type="email" name="Email"/></td>
+		</tr>
+		<td align="right">Phone:&emsp;&emsp;</td> 
+		<td align="left"><input type="text" name="Phone"/></td>
+		</tr>
+		<td align="right">Description:</td> 
+		<td align="left"><input type="text" name="Desc"/></td>
+		</tr>
+	</table>
+		<br><button>Submit</button>&emsp;&emsp;&emsp;&emsp;&emsp;
+	</form>
+	</div></div>-->
+    <img src="img2.jpg" style="width:100%; margin-top: 5px;">
+  </div>
+
+  <div class="mySlides fade">
+    <!--<div class="pos"><div align="right">
+	<form style=background-color:#808080 name="webpage" onsubmit="return check()" method="post"><br>
+	<table>
+		<tr>
+		<td align="right" color="white">First Name:</td>
+		<td align="left"><input type="text" name="Name"/></td>
+		</tr>
+		<td align="right">Email:&emsp;&emsp;</td> 
+		<td align="left"><input type="email" name="Email"/></td>
+		</tr>
+		<td align="right">Phone:&emsp;&emsp;</td> 
+		<td align="left"><input type="text" name="Phone"/></td>
+		</tr>
+		<td align="right">Description:</td> 
+		<td align="left"><input type="text" name="Desc"/></td>
+		</tr>
+	</table>
+		<br><button>Submit</button>&emsp;&emsp;&emsp;&emsp;&emsp;<br>
+	</form>
+	</div></div>-->
+    <img src="img3.jpg" style="width:100%; margin-top: 5px;">
+  </div>
+
+  <div class="pos"><div>
+      <form style="background-color:#808080" name="webpage" onsubmit="return check()" method="post"><br>
+      <table>
+        <tr>
+        <td>First Name:</td>
+        <td><input type="text" name="Name"/></td>
+        </tr>
+        <td>Email:&emsp;&emsp;</td> 
+        <td><input type="email" name="Email"/></td>
+        </tr>
+        <td>Phone:&emsp;&emsp;</td> 
+        <td><input type="text" name="Phone"/></td>
+        </tr>
+        <td>Description:</td> 
+        <td><textarea name="Desc"></textarea></td>
+        </tr>
+      </table><br>
+      <center><button class="submit">Submit</button></center><br>
+      </form>
+      </div>
+    </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+</div>
+
+</body>
+</html>
+
+<script>
+function check(){
+var name = document.forms.webpage.Name.value;
+var email = document.forms.webpage.Email.value;
+var phone = document.forms.webpage.Phone.value;
+var desc = document.forms.webpage.Desc.value;
+
+var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  
+var regPhone=/^\d{10}$/;                                        
+var regName = /\d+$/g;
+
+if (name == "" || regName.test(name)) {
+        window.alert("Please enter your name properly, "+name);
+        
+        return false;
+}
+
+if (email == "" || !regEmail.test(email)) {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+}
+
+if (phone == "" || !regPhone.test(phone)) {
+        alert("Please enter valid phone number.");
+        phone.focus();
+        return false;
+}
+
+if (desc == "" || regName.test(name)) {
+        window.alert("Please enter a description.");
+        desc.focus();
+        return false;
+}
+
+alert("First name: "+name);
+alert("Email: "+email);
+alert("Phone: "+phone);
+alert("Description: "+desc);
+}
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
