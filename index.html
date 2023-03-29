@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>User Details</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <a href="https://www.percoyo.com"><img class="logo" src="logo.png"/></a>
+    <center><div class="b"><a href="index2.html">Home 2</a></div></center>
+
+  <style>
+
+    *{
+      box-sizing: border-box;
+    }
+
+    .logo{
+      cursor: pointer;
+      padding: 5px; 
+      width: 100px;
+      position: static;
+      z-index: 10;
+    }
+
+    .b a:link, a:visited{
+                display: inline-block;
+                text-align: center;
+                font-weight: bold;
+                background-color: #333;
+                border-radius: 10px;
+                padding: 10px;
+                cursor: pointer;
+                color: white;
+                text-decoration: none;
+    }
+    .b a:hover, a:active{
+                background-color: dodgerblue;
+    }
+
+    ::selection {
+        color: black;
+        background: dodgerblue;
+    }
+    button {
+      cursor: pointer;
+      background: #016ABC;
+      color: #fff;
+      padding: 15px 32px;
+      text-align: center;
+      border: 1px solid #eee;
+      border-radius: 20px;
+      box-shadow: 3px 3px 3px #eee;
+      text-shadow: none;
+    }
+    
+    button:hover {
+      background: dodgerblue;
+      color: #fff;
+      border: 1px solid #eee;
+      border-radius: 20px;
+      box-shadow: 5px 5px 5px #eee;
+      text-shadow: none;
+    }
+    
+    .slideshow-container {
+      max-width: 2000px;
+      position: relative;
+      margin: auto;
+      z-index: 1;
+    }
+
+    .mySlides { display: none; }
+    
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      z-index: 1;
+    }
+    
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+      z-index: 1;
+    }
+    
+    .prev:hover, .next:hover {
+      background-color: whitesmoke;
+    }
+    
+    .text {
+      color: black;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .submit{ cursor: pointer; }
+
+    .pos {
+      color: white;
+      font-size:15px;
+      padding:8px 12px;
+      width:300px;
+      position: absolute;
+      top:30%;
+      left:60%;
+      z-index: 5;
+    }
+    
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: black;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: white;
+    }
+    
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: 0.4}
+      to {opacity: 1}
+    }
+    
+    body{ color:white; margin: 0;}
+    
+    form{ 
+      padding: 10px; 
+      border-radius: 25px;
+    }
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333333;
+      border-radius: 5px;
+    }
+
+    li { float: left; }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    li a:hover { background-color: dodgerblue; }
+
+    li a:visited{ color: white; }
+
+    li a:active{ color: gold; }
+
+    .footer {
+                background-color: black;
+                color: white;
+                padding: 10px;
+                text-align: center;
+    }    
+
+  </style>
+</head>
+
+<body>
+  
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="img2.jpg" style="width:100%; margin-top: 5px;">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="img1.jpg" style="width:100%; margin-top: 5px;">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="img3.jpg" style="width:100%; margin-top: 5px;">
+    </div>
+
+    <div class="pos">
+      <form style="background-color:#808080" name="webpage" onsubmit="return check()" method="post"><br>
+      <table>
+        <tr>
+          <th colspan="2">Fill your Details</th>
+          <tr><td style="padding-bottom: 10px;"></td><td></td></tr>
+        <tr>
+          <td>First Name:</td>
+          <td><input type="text" name="Name" required autofocus/></td>
+        </tr>
+        <tr>
+        </tr>
+          <td>Email:&emsp;&emsp;</td> 
+          <td><input type="email" name="Email"/></td>
+        </tr>
+        <tr>
+          <td>Phone:&emsp;&emsp;</td> 
+          <td><input type="text" name="Phone"/></td>
+        </tr>
+        <tr>
+          <td>Description:</td> 
+          <td><textarea style="width: 171px;" name="Desc"></textarea></td>
+        </tr>
+      </table><br>
+      <center><button class="submit">Submit</button></center><br>
+      </form>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p title="Copyright">© Copyright 2023 by sza619. All Rights Reserved.</p>
+  </div>
+
+</body>
+</html>
+
+<script>
+function check(){
+var name = document.forms.webpage.Name.value;
+var email = document.forms.webpage.Email.value;
+var phone = document.forms.webpage.Phone.value;
+var desc = document.forms.webpage.Desc.value;
+
+var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  
+var regPhone=/^\d{10}$/;                                        
+var regName = /\d+$/g;
+
+if (name == "" || regName.test(name)) {
+        window.alert("Please enter your name properly, "+name);
+        
+        return false;
+}
+
+if (email == "" || !regEmail.test(email)) {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+}
+
+if (phone == "" || !regPhone.test(phone)) {
+        alert("Please enter valid phone number.");
+        phone.focus();
+        return false;
+}
+
+if (desc == "" || regName.test(name)) {
+        window.alert("Please enter a description.");
+        desc.focus();
+        return false;
+}
+
+alert("First name: "+name);
+alert("Email: "+email);
+alert("Phone: "+phone);
+alert("Description: "+desc);
+}
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
