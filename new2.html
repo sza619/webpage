@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+  <style>
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="offcanvas offcanvas-start" id="here">
+    <div class="offcanvas-header">
+      <h1 class="offcanvas-title">Menu</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li class="nav-item">Check for Adulteration:</li><br>
+            <li class="nav-item">
+              <a class="nav-link" href="index2.html">Select An Image</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index3.html">Upload An Image</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+<div class="container-fluid bg-primary" style="padding: 0;" >
+  <div class="p-3">
+    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas"
+     data-bs-target="#here">Menu</button>
+  </div>
+  <div class="p-5 text-white text-center">
+    <h1>Food Adulteration</h1>
+    <p>A serious issue plaguing the health and safety of many individuals</p> 
+  </div>
+</div>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Problem')">Problem</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Adulteration</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Solution</button>
+</div>
+
+<div id="Problem" class="tabcontent">
+  <h3>The Problem</h3>
+  <p>
+    <br>
+    <b><i>&emsp;&emsp;Food adulteration is a serious issue plaguing the health and safety of many individuals.</i></b> It is the process of deliberately changing, adding, or removing a food ingredient without the consumer being aware, thus altering the nutritional value of the product. It can occur on purpose or inadvertently due to poor hygiene, and can greatly increase the likelihood of serious illnesses such as food poisoning and more.
+    <br><br>
+    &emsp;&emsp;Furthermore, food adulteration can occur through the use of substandard ingredients. For example, many food manufacturers are known to use lower quality ingredients in order to cut costs, leading to compromised nutritional values and taste. Additionally, using expired ingredients can cause food to become contaminated and can make a person seriously ill.<br>
+      Though food adulteration can be difficult to detect,
+    there are some telltale signs of adulterated food. Food
+    that has been adulterated may smell strange or have an
+    unusual taste, color, or texture. Additionally, food
+    labels should alert consumers to the presence of
+    unhealthy additives, expired ingredients, and other
+    dangerous components.<br>
+      In conclusion, food adulteration is a serious issue that
+    affects both the health and safety of individuals as well
+    as the quality of food products. While it can be difficult
+    to detect, understanding the signs of adulteration can
+    help consumers stay aware and make healthy choices
+    when purchasing food items.<br><br>
+  </p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Adulteration in Toor Daal</h3>
+  <p>
+    <br>
+    <i>An adulterant is a foreign substance added to the existing food grains.</i> Adding an adulterant
+    causes problems to a human body when consumed. In the process of adulteration, minute quantities of
+    the foreign non-nutritious substances are added knowingly in order to improve its appearance, number
+    and storage properties of the group. <b>It is observed that the bag of Toor Dal is adulterated with Khesari
+    Dal.</b><br><br>
+    In terms of grain production, India comes in second place to China. In India, all pre- and postharvest procedures are carried out manually with the assistance of skilled or unskilled labor. Because of
+    this manual processes take a long time and are inefficient, automation is required in the agriculture
+    sector to produce precise results. Sorting and grading of grains are steps in the post-harvest process.
+    These factors include the internal (taste, flavor, aroma, nutrients) and external (texture, shape, color,
+    size) quality factor checks. This is done in order to spot the adulterants hiding with the food grains.<br>
+    This project covers the concept of grain adulteration in Toor Dal, ways in which it is
+    adulterated with Khesari Dal, methods used to identify the adulterants through images and provide
+    ways to control the adulteration.<br><br>
+  </p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>The Solution</h3>
+  <p>
+    <br>
+    To address the aforementioned issues, this research first compiles a sizable amount of dal image
+    data. A Neural Network Model is developed for classification the Toor Dal grains. The model will next
+    create a closest mean classifier that uses knowledge to categorize bulk grain items like (Dal) as raw.
+    Convolutional Neural Networks(CNN) are successfully employed in machine vision systems to recognize
+    Dal. It is described how to grade and classify various grains (for a single grain kernel) using the Dall
+    classification system. For a more effective working model, we use the feature of extracting the shape and
+    structure to discover the adulteration.
+    Identification of adulterants of the Toor Dal grains from the big bag of samples is done by the two ways:
+    <ol type="I">
+      <li>Image processing</li>
+      <li>Machine learning</li>
+    </ol>
+    <b>Image processing:</b> Is a broad term that involves the use of image processing techniques to improve
+    image quality ad extract a set of features from the pixels of the image. It depends on the RGB of the
+    individual pixels.<br>
+    <b>Machine learning:</b> These algorithms use these features to develop decision methods that can predict
+    and classify the Dal patterns.<br><br>
+    To select an image and check for Toor Daal Aduteration, click on the following link:<br><br>
+		<center><a type="button" class="btn btn-primary" href="/select">Select Image</a></center>
+  </p>
+</div>
+
+</body>
+</html>
