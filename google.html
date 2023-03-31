@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                margin: 0;
+                font-size: 13px;
+                font-family: Arial, sans-serif;
+            }
+            ul {list-style-type: none;}
+            li {
+                float: right;
+                margin-top: 9px;
+                margin-right: 19px;
+                font-family: Google Sans,Roboto,Helvetica,Arial,sans-serif;
+                font-weight: 500;
+                font-size: 14px;
+            }
+            .g a{
+                color: black;
+                text-decoration: none;
+            }
+            .g a:visited{color: black;}
+            .g a:hover,a:active{text-decoration: underline;}
+            .s a{
+                text-decoration: none;
+                background-color: #1a73e8;
+                padding: 10px 25px;
+                color: white;
+                border-radius: 4px;
+                letter-spacing: .25px;
+            }
+            .s a:hover{
+                text-decoration: none;
+                background-color: rgb(0, 93, 187);
+                box-shadow: 0 2px 3px 0 black;
+            }
+            .h{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 23px;
+            }
+            .container{
+                position: relative;
+                margin-top: 5%;
+                width: 45vw;
+            }
+            input:focus, textarea:focus, select:focus{
+                outline: none;
+            }
+            .s2{
+                border: none;
+                width:90%;
+                height: 6vh;
+                font-size: 16px;
+            }
+            .s2i:hover{
+                box-shadow: 0 1px 6px rgba(32,33,36,.28);
+                border-color: rgba(223,225,229,0);
+            }
+            .s2i{
+                border: 1px solid #dfe1e5;
+                border-radius: 24px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                width: 95%;
+                display: flex;
+            }
+            .b{
+                background-color: #f8f9fa;
+                border: 1px solid #f8f9fa;
+                border-radius: 4px;
+                color: #3c4043;
+                font-size: 14px;
+                margin: 11px 4px;
+                padding: 0 16px;
+                line-height: 27px;
+                height: 36px;
+                min-width: 54px;
+                text-align: center;
+                cursor: pointer;
+                user-select: none;
+            }
+            .b:hover{
+                box-shadow: 0 1px 1px rgba(0,0,0,.1);
+                background-color: #f8f9fa;
+                border: 1px solid #dadce0;
+                color: #202124;
+            }
+            .f{
+                background-color: rgb(240, 240, 240);
+                color: grey;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 0 20px;
+            }
+            .l{
+                display: flex;
+                font-size: 14px
+            }
+            .l a{
+                color: grey;
+                text-decoration: none;
+                display: block;
+                padding: 15px;
+                white-space: nowrap;
+            }
+            .l a:visited{color: grey;}
+            .l a:hover,a:active{text-decoration: underline;}
+            .t{
+                color: #4d5156;
+                display: inline-block;
+                line-height: 28px;
+                margin-top: 10px;
+            }
+            .t a{
+                font-size: small;
+                text-decoration: none;
+            }
+            #p{padding-left: 5px;}
+            #p:hover{text-decoration: underline;}
+            .i{
+                background-color:#f2f2f2;
+                padding: 15px 30px;
+                border-bottom: 1px solid #dadce0;
+                font-size: 15px;
+                color: #70757a;}
+                .fo{
+                    box-sizing: border-box;
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
+                }
+                .pos{
+                    display: flex;
+                    align-items: center;
+                    padding-right: 13px;
+                    margin-left: 15px;}
+                .pos2{
+                    display: flex;
+                    width:100%;
+                }
+        </style>
+    </head>
+    <body>
+        <center><div class="container">
+            <center><img src="googlelogo.png"></center><br>
+            <div class="s2i">
+                <div class="pos"><i class="fa fa-search" style="font-size: 18px; color:#5F6368"></i></div>
+                <div class="pos2"><input class="s2" type="text"/></div>
+            </div>
+            <center><button class="b">Google Search</button>
+                <button class="b">I'm Feeling Lucky</button></center>
+            <center><div class="t">Google offered in:
+                <a id="p" href="#">हिन्दी</a>
+                <a id="p" href="#">বাংলা</a>
+                <a id="p" href="#">తెలుగు </a>
+                <a id="p" href="#">मराठी </a>
+                <a id="p" href="#">தமிழ் </a>
+                <a id="p" href="#">ગુજરાતી </a>
+                <a id="p" href="#">ಕನ್ನಡ </a>
+                <a id="p" href="#">മലയാളം </a>
+                <a id="p" href="#">ਪੰਜਾਬੀ</a></div></center><br>
+        </div></center>
+        <div class="h">
+        <ul>
+            <li class="s"><a href="https://accounts.google.com/ServiceLogin?hl=en&passive=true
+                &continue=https://www.google.com/&ec=GAZAmgQ">Sign in</a></li>
+            <li class="g"><a href="https://www.google.co.in/imghp?hl=en&ogbl">Images</a></li>
+            <li class="g"><a href="https://mail.google.com/mail/">Gmail</a></li>
+        </ul>
+        </div>
+        
+        <div class="fo">
+            <div class="i">India</div>
+                <div class="f">
+                    <div class="l">
+                        <a href="https://about.google/?utm_source=google-IN&utm_medium=
+                            referral&utm_campaign=hp-footer&fg=1">About</a>
+                        <a href="https://www.google.com/intl/en_in/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=
+                            google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+                        <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_
+                            hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a></li>
+                        <a href="https://google.com/search/howsearchworks/?fg=1">How Search works</a>
+                    </div>
+                    <div class="l">
+                        <a href="https://policies.google.com/privacy?hl=en-IN&fg=1">Privacy</a>
+                        <a href="https://policies.google.com/terms?hl=en-IN&fg=1">Terms</a>
+                        <a href="#">Settings</a>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>
