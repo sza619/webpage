@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            .container{
+                display: flex;
+                justify-content: center;
+            }
+            .a{
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                padding: 10px;
+                border: 1px solid aqua;
+                border-radius: 10px;
+                background-color: #ffffcc;
+            }
+            .a button{
+                margin-top: 5px;
+                padding: 5px 10px;
+            }
+        </style>
+        <script>
+            function f1()
+            {document.getElementById("demo").innerHTML= "New Content!"}
+        </script>
+    </head>
+    
+    <body>
+
+        <center><h1>Javascript</h1></center>
+        <div class="container">
+            <div class="a">
+                <p id="demo">Change this content by clicking the button below:</p>
+                <button type="button" onclick='f1()'>Click Me!</button>
+                <button type="button" onclick='document.getElementById("demo").innerHTML= 
+                "Change this content by clicking the button below:"'>Change it Back</button>
+            </div>
+            <div class="a">
+                <p id="demo2">Let's play Hide and Seek</p>
+                <button type="button" onclick="document.getElementById('demo2').innerHTML= 
+                ''">Hide</button>
+                <button type="button" onclick="document.getElementById('demo2').innerHTML= 
+                'I\'m here!'">Seek</button>
+            </div>
+            <div class="a">
+                <button onclick="document.getElementById('demo3').innerHTML=
+                Date()">View/Update Date and Time</button>
+                <p id="demo3"></p>
+            </div>
+            <div class="a">
+                <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+                <button onclick="document.getElementById('myImage').src=
+                'pic_bulbon.gif'">Switch ON</button>
+                <button onclick="document.getElementById('myImage').src=
+                'pic_bulboff.gif'">Switch OFF</button>
+            </div>
+        </div>
+    </body>
+
+</html>
