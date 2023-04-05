@@ -1,3 +1,5 @@
+# Webpages
+
 This GitHub repository consists of Webpages designed while learning HTML, CSS, SASS, BootStrap and JavaScript.
 
 You can access these easily by following the steps below:
@@ -12,3 +14,6 @@ Information about the webpages:
 * bootstrap.html: Designed to practice BootStrap.
 * js.html: Designed to practice JavaScript.
 * google.html: Designed the Google Homepage(As on 04-04-2023).
+
+My learning progress can be tracked here: 
+  https://www.w3profile.com/sza619
