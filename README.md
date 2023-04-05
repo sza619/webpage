@@ -11,6 +11,7 @@ Information about the webpages:
 * index.html: The first webpage I designed. 
 * index2.html: Improved it by using CSS.
 * index3.html(Homepage): Redesigned it using BootStrap.
+* visuals.html: Designed to practice CSS and animations.
 * bootstrap.html: Designed to practice BootStrap.
 * js.html: Designed to practice JavaScript.
 * google.html: Designed the Google Homepage(As on 04-04-2023).
