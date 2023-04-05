@@ -15,5 +15,4 @@ Information about the webpages:
 * js.html: Designed to practice JavaScript.
 * google.html: Designed the Google Homepage(As on 04-04-2023).
 
-My learning progress can be tracked here: 
-  https://www.w3profile.com/sza619
+My learning progress can be tracked here: https://www.w3profile.com/sza619
