@@ -64,3 +64,43 @@ function check(){
       slides[slideIndex-1].style.display = "block";
       dots[slideIndex-1].className += " active";
     }
+    function f1()
+            {
+                var e = document.getElementById("b3");
+                if (e.value=="Change"){
+                    e.value = "Change it back";
+                    document.getElementById("demo").innerHTML= "New Content!";
+                }
+                else{
+                    e.value = "Change";
+                    document.getElementById("demo").innerHTML= "Change this content by clicking the button below:";
+                }
+            }
+            function f2()
+            {
+                var e = document.getElementById("b1");
+                if (e.value=="Date and Time") e.value = "Update";
+                document.getElementById('demo3').innerHTML=Date();
+            }
+            function f3(){
+                var n = (100 * Math.random());
+                document.getElementById('no').innerHTML=("j-" + n.toFixed(0));//Can use Math.floor as well
+                var e = document.getElementById("b2");
+                if (e.value=="View") e.value = "Change it";
+            }
+            function f4()
+            {
+                const message = document.getElementById("p1");
+                message.innerHTML = "";
+                let x = document.getElementById("in").value;
+                try { 
+                    if(x.trim() == "")  throw "empty";
+                    if(isNaN(x)) throw "not a number";
+                    x = Number(x);
+                    if(x < 5)  throw "too low";
+                    if(x > 10)   throw "too high";
+                }
+                catch(err) {
+                    message.innerHTML = "Input is " + err;
+                }
+            }
