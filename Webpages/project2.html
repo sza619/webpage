@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+<script>
+    function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+</script>
+
+  <style>
+    body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+    }
+    /* Style tab links */
+    .tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: 1px solid transparent;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+    }
+    .tablink:hover {
+    background-color: #777;
+    }
+    /* Style the tab content (and add height:100% for full page content) */
+    .tabcontent {
+    color: black;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+    }
+    h1{font-size: 4rem;}
+    .image-container{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position: center;
+        background-size: cover;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('cdaal-transformed.png');
+        animation: bg 2s ease;
+    }
+    @keyframes bg {
+    from {opacity: 0.5;}
+    to {opacity: 1;}
+    }
+    .m{
+        display: flex;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+    }
+    .h p{
+        font-size: 24px;
+    }
+    .h{
+        position: absolute;
+        animation: t 2s ease;
+    }
+    @keyframes t {
+    from {top:0;}
+    to {top:31vh;}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="offcanvas offcanvas-start" id="here">
+    <div class="offcanvas-header">
+      <h1 class="offcanvas-title">Menu</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li class="nav-item">Check for Adulteration:</li><br>
+            <li class="nav-item">
+              <a class="nav-link" href="index2.html">Select An Image</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index3.html">Upload An Image</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+<div class="image-container">
+        <div class="m p-3">
+            <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#here">Menu</button>
+        </div>
+        <div class="h p-5 text-white text-center">
+            <h1>Food Adulteration</h1>
+            <p>A serious issue plaguing the health and safety of many individuals</p> 
+        </div>
+    </div>
+</div>
+
+<button class="tablink active" onclick="openPage('Home', this, 'red')" id="defaultOpen">Problem</button>
+<button class="tablink" onclick="openPage('News', this, 'orange')">Adulteration</button>
+<button class="tablink" onclick="openPage('Contact', this, 'green')">Solution</button>
+
+<div id="Home" class="tabcontent">
+  <h3>The Problem</h3>
+  <p>
+    <br>
+    <b><i>&emsp;&emsp;Food adulteration is the process of deliberately changing, adding, 
+        or removing a food ingredient without the consumer being aware, thus altering the 
+        nutritional value of the product.</i></b> It can occur on purpose or inadvertently 
+        due to poor hygiene, and can greatly increase the likelihood of serious illnesses 
+        such as food poisoning and more.
+    <br><br>
+    &emsp;&emsp;Furthermore, food adulteration can occur through the use of substandard 
+    ingredients. For example, many food manufacturers are known to use lower quality ingredients 
+    in order to cut costs, leading to compromised nutritional values and taste. Additionally, 
+    using expired ingredients can cause food to become contaminated and can make a person seriously ill.<br>
+      Though food adulteration can be difficult to detect,
+    there are some telltale signs of adulterated food. Food
+    that has been adulterated may smell strange or have an
+    unusual taste, color, or texture. Additionally, food
+    labels should alert consumers to the presence of
+    unhealthy additives, expired ingredients, and other
+    dangerous components.<br>
+      In conclusion, food adulteration is a serious issue that
+    affects both the health and safety of individuals as well
+    as the quality of food products. While it can be difficult
+    to detect, understanding the signs of adulteration can
+    help consumers stay aware and make healthy choices
+    when purchasing food items.<br><br>
+  </p>
+  <center><iframe width="560" height="315" src="https://www.youtube.com/embed/Vz719gfUjOQ" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+    encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center><br><br>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>Adulteration in Toor Daal</h3>
+  <p>
+    <br>
+    <i>An adulterant is a foreign substance added to the existing food grains.</i> Adding an adulterant
+    causes problems to a human body when consumed. In the process of adulteration, minute quantities of
+    the foreign non-nutritious substances are added knowingly in order to improve its appearance, number
+    and storage properties of the group. <b>It is observed that the bag of Toor Dal is adulterated with Khesari
+    Dal.</b><br><br>
+    In terms of grain production, India comes in second place to China. In India, all pre- and postharvest procedures are carried out manually with the assistance of skilled or unskilled labor. Because of
+    this manual processes take a long time and are inefficient, automation is required in the agriculture
+    sector to produce precise results. Sorting and grading of grains are steps in the post-harvest process.
+    These factors include the internal (taste, flavor, aroma, nutrients) and external (texture, shape, color,
+    size) quality factor checks. This is done in order to spot the adulterants hiding with the food grains.<br>
+    This project covers the concept of grain adulteration in Toor Dal, ways in which it is
+    adulterated with Khesari Dal, methods used to identify the adulterants through images and provide
+    ways to control the adulteration.<br><br>
+  </p>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>The Solution</h3>
+    <br>
+    To address the aforementioned issues, this research first compiles a sizable amount of dal image
+    data. A Neural Network Model is developed for classification the Toor Dal grains. The model will next
+    create a closest mean classifier that uses knowledge to categorize bulk grain items like (Dal) as raw.
+    Convolutional Neural Networks(CNN) are successfully employed in machine vision systems to recognize
+    Dal. It is described how to grade and classify various grains (for a single grain kernel) using the Dall
+    classification system. For a more effective working model, we use the feature of extracting the shape and
+    structure to discover the adulteration.
+    Identification of adulterants of the Toor Dal grains from the big bag of samples is done by the two ways:
+    <ol type="I">
+      <li>Image processing</li>
+      <li>Machine learning</li>
+    </ol>
+    <b>Image processing:</b> Is a broad term that involves the use of image processing techniques to improve
+    image quality ad extract a set of features from the pixels of the image. It depends on the RGB of the
+    individual pixels.<br>
+    <b>Machine learning:</b> These algorithms use these features to develop decision methods that can predict
+    and classify the Dal patterns.<br><br>
+    To select an image and check for Toor Daal Aduteration, click on the following link:<br><br>
+		<center><a type="button" class="btn btn-primary" href="/select">Select Image</a></center>
+</div>
+
+</body>
+</html>

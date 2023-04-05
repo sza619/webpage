@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)file:///C:/Users/PER%2012/Desktop/webpage/index2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>User Details</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<div class="parent">
+        <div class="in">
+            <a href="https://www.percoyo.com/"><img class="logo" src="logo.png"></a>
+        </div>
+        <div class="in">
+            <ul>
+                <li><a href="index.html">Home 1</a></li>
+                <li><a href="index3.html">Home 3</a></li>
+                <li><a href="bootstrap.html">Bootstrap</a></li>
+                <li><a href="visuals.html">Visuals</a></li>
+                <li><a href="js.html">Javascript</a></li>
+                </ul>
+        </div>
+</div>
+
+  <style>
+
+    *{
+      box-sizing: border-box;
+    }
+
+    .parent{
+        display: flex;
+        justify-content: center;
+    }
+
+    .in{
+        justify-content: center;
+        align-content: center;
+    }
+
+    .logo{
+      cursor: pointer;
+      margin: 5px 0 0 5px;
+      height: 80px;
+      position: static;
+      z-index: 10;
+    }
+
+    ::selection {
+        color: black;
+        background: dodgerblue;
+    }
+
+    button {
+      cursor: pointer;
+      background: #016ABC;
+      color: #fff;
+      padding: 15px 32px;
+      text-align: center;
+      border-radius: 20px;
+      text-shadow: none;
+    }
+    
+    button:hover {
+      background: dodgerblue;
+      color: #fff;
+      border-radius: 20px;
+      box-shadow: 3px 3px 5px #eee;
+      text-shadow: none;
+    }
+    
+    .text {
+      color: black;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .submit{ cursor: pointer; }
+
+    body{
+         color:white; 
+         font-family: Verdana, sans-serif; margin:0;
+        }
+    
+    form{ 
+      padding: 10px; 
+      border-radius: 25px;
+    }
+    
+    ul {
+      list-style-type: none;
+      margin: 25px 5px 10px 100px;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    li { 
+        float: left; 
+        color: dodgerblue;
+    }
+
+    li a {
+      display: block;
+      color: dodgerblue;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+      border-right: 1px solid dodgerblue;
+      transition-duration: 0.4s;
+    }
+
+    li a:hover { 
+        background-color: dodgerblue;
+        color: white; 
+        transition-duration: 0.4s;
+    }
+
+    li a:active{ color: gold; }
+
+    .footer {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+    }    
+
+    @media screen and (min-width: 800px) {
+        .mobile{
+        position: absolute;
+        top: 30%;
+        right: 20%;
+    }
+    }
+
+    @media screen and (max-width: 500px) {
+        .logo{
+            margin: 80px 0 0 5px;
+        }
+        .in li {
+            float: none;
+        }
+        .in li a{
+            border-right: 0;
+            border-bottom: 1px solid dodgerblue;
+        }
+        .in li a:hover{
+            color: white;
+        }
+        .mobile{
+            font-size: small;
+            top: 50%;
+            right: 25%;
+            width: 60%;
+        }
+        .mobile form{
+            width: 100%;
+            margin: 20px;
+        }
+        .slideshow-container{height: 80vw;}
+        .slideshow-container img{ height: 100%;}
+    }
+    /*@media screen and (min-width: 800px) and (max-width: 1200px) {
+        .mobile{
+            position: absolute;
+            right: 15%;
+            width: 40%;
+        }
+        .mobile form{
+            width: 100%;
+            margin: 20px;
+        }
+        img{height: 50vw;}
+    }*/
+    
+    .mySlides {display: none}
+    img {
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+    background-color: white;
+    }
+
+    /* Caption text */
+    .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+    background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+    .prev, .next, .text {font-size: 11px}
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        display: flex;
+        position: relative;
+        margin: 10px 0 10px 0;
+    }
+
+    .slideshow-container > div form{
+        position: relative;
+        left: -60%;
+        top: -20%;
+        z-index: 3;
+        padding: 15px;
+    }
+
+    .mobile{
+        position: absolute;
+    }
+
+  </style>
+</head>
+<body>
+    <section>
+    <div class="slideshow-container">
+        <div class="mySlides fade" style="display: block;">
+            <img src="img2.jpg" style="width:98.7vw">
+        </div>
+
+        <div class="mySlides fade" style="display: none;">
+            <img src="img1.jpg" style="width:98.7vw">
+        </div>
+
+        <div class="mySlides fade" style="display: none;">
+            <img src="img3.jpg" style="width:98.7vw">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>     
+   
+    <div class="mobile">
+        <form style="background-color:#808080" name="webpage" onsubmit="return check()" method="post">
+            <center>Fill Your Details</center><br>
+            <label for="fname">First Name:</label>&nbsp;
+            <input type="text" id="fname" name="Name" autofocus=""><br><br>
+            <label for="email">Email:</label>  &nbsp;&nbsp;&nbsp;
+            <input type="email" id="fname" name="Email"><br><br>
+            <label for="phone">Phone:</label>  &nbsp;&nbsp;
+            <input type="text" id="fname" name="Phone"><br><br>
+            <label for="Description">Description:</label>&nbsp;
+            <textarea style="width: 175px;" name="Desc"></textarea><br><br>
+            <center><button class="submit">Submit</button></center>
+        </form>
+    </div>
+    </section>
+
+    <div class="footer">
+        <p title="Copyright">© Copyright 2023 by sza619. All Rights Reserved.</p>
+    </div>
+
+<script>
+function check(){
+var name = document.forms.webpage.Name.value;
+var email = document.forms.webpage.Email.value;
+var phone = document.forms.webpage.Phone.value;
+var desc = document.forms.webpage.Desc.value;
+
+var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  
+var regPhone=/^\d{10}$/;                                        
+var regName = /\d+$/g;
+
+if (name == "" || regName.test(name)) {
+        window.alert("Please enter your name properly, "+name);
+        
+        return false;
+}
+
+if (email == "" || !regEmail.test(email)) {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+}
+
+if (phone == "" || !regPhone.test(phone)) {
+        alert("Please enter valid phone number.");
+        phone.focus();
+        return false;
+}
+
+if (desc == "" || regName.test(name)) {
+        window.alert("Please enter a description.");
+        desc.focus();
+        return false;
+}
+
+alert("First name: "+name);
+alert("Email: "+email);
+alert("Phone: "+phone);
+alert("Description: "+desc);
+}
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>

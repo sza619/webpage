@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body, #b2{margin: 0;}
+            h1{
+                padding: 10px;
+                background-color: linen;
+                color: brown;
+            }
+            .b{margin-left: 20px;}
+            .b a:link, a:visited{
+                display: inline-block;
+                text-align: center;
+                font-weight: bold;
+                background-color: #333;
+                border-radius: 10px;
+                padding: 10px;
+                cursor: pointer;
+                color: white;
+                text-decoration: none;
+                transition-duration: 0.4s;
+            }
+            .b a:hover, a:active{
+                background-color: dodgerblue;
+                transition-duration: 0.4s;
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 10px 20px 0 rgba(0,0,0,0.19);
+            }
+            .container{
+                display: flex;
+                justify-content: center;
+            }
+            .a{
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                padding: 10px;
+                border: 1px solid aqua;
+                border-radius: 10px;
+                background-color: #ffffcc;
+            }
+            .a button, input{
+                margin-top: 5px;
+                padding: 5px 10px;
+            }
+            #no{
+                justify-content: center;
+                display: flex;
+                flex-wrap: wrap;
+            }
+        </style>
+        <script>
+            function f1()
+            {
+                var e = document.getElementById("b3");
+                if (e.value=="Change"){
+                    e.value = "Change it back";
+                    document.getElementById("demo").innerHTML= "New Content!";
+                }
+                else{
+                    e.value = "Change";
+                    document.getElementById("demo").innerHTML= "Change this content by clicking the button below:";
+                }
+            }
+            function f2()
+            {
+                var e = document.getElementById("b1");
+                if (e.value=="Date and Time") e.value = "Update";
+                document.getElementById('demo3').innerHTML=Date();
+            }
+            function f3(){
+                var n = (100 * Math.random());
+                document.getElementById('no').innerHTML=("j-" + n.toFixed(0));//Can use Math.floor as well
+                var e = document.getElementById("b2");
+                if (e.value=="View") e.value = "Change it";
+            }
+        </script>
+    </head>
+    
+    <body>
+
+        <center><h1>Javascript</h1></center>
+        <div class="b">
+            <a href="index3.html">Home</a>
+        </div>
+        <div class="container">
+            <div class="a">
+                <p id="demo">Change this content by clicking the button below:</p>
+                <input id="b3" type="button" onclick='f1()' value="Change"></input>
+            </div>
+            <div class="a">
+                <p id="demo2">Let's play Hide and Seek</p>
+                <button type="button" onclick="document.getElementById('demo2').innerHTML= 
+                ''">Hide</button>
+                <button type="button" onclick="document.getElementById('demo2').innerHTML= 
+                'I\'m here!'">Seek</button>
+            </div>
+            <div class="a">
+                <p>Your JS-Number is: <div id="no">???</div></p>
+                <input id="b2" type="button" onclick='f3()' value="View"></input>
+            </div>
+            <div class="a">
+                <input type="button" id="b1" onclick="f2()" value="Date and Time"></input>
+                <p id="demo3"></p>
+            </div>
+            <div class="a">
+                <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+                <button onclick="document.getElementById('myImage').src=
+                'pic_bulbon.gif'">Switch ON</button>
+                <button onclick="document.getElementById('myImage').src=
+                'pic_bulboff.gif'">Switch OFF</button>
+            </div>
+        </div>
+    </body>
+
+</html>
