@@ -2,7 +2,7 @@ This GitHub repository consists of Webpages designed while learning HTML, CSS, S
 
 You can access these easily by following the steps below:
 * Download the ZIP file and extract it.
-* Open index3.html in the Webpages folder. (This the homepage containing links to all other webpages)
+* Open index3.html in the Webpages folder. (This the Homepage)
 * Navigate to other webpages by making use of the links and try out the features.
 
 Information about the webpages:
