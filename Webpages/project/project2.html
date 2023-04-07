@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Food Adulteration</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <style>
+        body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial;
+        }
+        h1{font-size: 4rem;}
+        .image-container{
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-position: center;
+            background-size: cover;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/cdaal-transformed.png');
+            animation: bg 2s ease;
+        }
+        @keyframes bg {
+        from {opacity: 0.5;}
+        to {opacity: 1;}
+        }
+        .m{
+            display: flex;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+        }
+        .h p{
+            font-size: 24px;
+        }
+        .h{
+            position: absolute;
+            animation: t 2s ease;
+        }
+        @keyframes t {
+        from {top:0;}
+        to {top:31vh;}
+        }
+        .container{max-width:100%}
+        li{
+            margin-right: 2px;
+        }
+        .b{width: 32vw;}
+      </style>
+  </head>
+  <body>
+    <div class="offcanvas offcanvas-start" id="here">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title">Menu</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <nav class="navbar bg-light">
+            <div class="container-fluid">
+              <ul class="navbar-nav">
+                <li class="nav-item">Check for Adulteration:</li><br>
+                <li class="nav-item">
+                  <a class="nav-link" href="index2.html">Select An Image</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index3.html">Upload An Image</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      
+    <div class="image-container">
+            <div class="m p-3">
+                <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#here">Menu</button>
+            </div>
+            <div class="h p-5 text-white text-center">
+                <h1>Food Adulteration</h1>
+                <p>A serious issue plaguing the health and safety of many individuals</p> 
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <button class="nav-link active btn-xxl bg-danger text-white b" data-bs-toggle="tab" data-bs-target="#Problem">Problem</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link bg-warning btn-xxl text-white b" data-bs-toggle="tab" data-bs-target="#Adulteration">Adulteration</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link bg-success btn-xxl text-white b" data-bs-toggle="tab" data-bs-target="#Solution">Solution</button>
+        </li>
+      </ul>
+      <div class="tab-content mt-3">
+        <div id="Problem" class="tab-pane fade show active">
+          <h3>Problem</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor augue ac enim semper pharetra. Praesent finibus laoreet quam, in bibendum turpis dictum eu. Praesent fermentum elit at eros varius, vel semper sapien cursus. Suspendisse et neque vel augue efficitur dapibus nec vel ipsum. Donec non velit non augue varius sodales eget vel lorem.</p>
+        </div>
+        <div id="Adulteration" class="tab-pane fade">
+          <h3>Adulteration</h3>
+          <p>Nam nec magna quis eros sollicitudin pretium a auctor odio. Etiam bibendum magna euismod, volutpat lectus vitae, faucibus ipsum. Proin tincidunt fringilla velit, non vehicula ipsum suscipit a. Curabitur feugiat libero in velit lobortis, nec sagittis leo interdum. Praesent semper tellus vitae elit lacinia pharetra. Morbi in libero vel leo bibendum tincidunt vel eu felis.</p>
+        </div>
+        <div id="Solution" class="tab-pane fade">
+          <h3>Solution</h3>
+          <p>Nullam non nunc eget justo congue fermentum. Praesent laoreet eros vel quam aliquam, sit amet vestibulum sapien ultricies. Sed interdum felis sed orci blandit faucibus. Nullam et est eget velit tincidunt hendrerit. Aliquam sed sapien eu turpis hendrerit bibendum sit amet a magna. Nullam condimentum erat quis sapien convallis faucibus. Suspendisse potenti. Sed vitae tortor ut purus ultricies fermentum.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
