@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click and Display Image</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .container{
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container p-5 bg-warning">
+    <h1>Click and Display Image</h1>
+    </div>
+    <div class="p-3 text-center">
+        <button type="button" class="btn btn-primary" id="snap-btn">Snap Photo</button>
+    </div>
+    <div id="image-container"></div>
+    <script>
+      const snapBtn = document.getElementById("snap-btn");
+      const imageContainer = document.getElementById("image-container");
+      snapBtn.addEventListener("click", () => {
+        const video = document.createElement("video");
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d");
+        navigator.mediaDevices.getUserMedia({ video: true })
+          .then(stream => {
+            video.srcObject = stream;
+            video.play();
+            const intervalId = setInterval(() => {
+              canvas.width = video.videoWidth;
+              canvas.height = video.videoHeight;
+              ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+              const imageUrl = canvas.toDataURL("image/png");
+              const image = document.createElement("img");
+              image.src = imageUrl;
+              imageContainer.appendChild(image);
+            }, 1000);
+            snapBtn.disabled = true;
+            setTimeout(() => {
+              clearInterval(intervalId);
+              stream.getTracks().forEach(track => track.stop());
+              snapBtn.disabled = false;
+            }, 5000);
+          })
+          .catch(err => console.error(err));
+      });
+    </script>
+  </body>
+</html>
