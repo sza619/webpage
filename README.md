@@ -16,4 +16,6 @@ Information about the webpages:
 * js.html: Designed to practice JavaScript.
 * google.html: Designed the Google Homepage(As on 04-04-2023).
 
+PHP folder contains forms and so on, I created while learning PHP.
+
 My learning progress can be tracked here: https://www.w3profile.com/sza619
