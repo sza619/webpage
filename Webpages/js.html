@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="images/img3.jpg">
-
+        <script src="demo_workers.js"></script>
         <style>
             *{
                 box-sizing: border-box;
@@ -59,9 +59,81 @@
                 flex-wrap: wrap;
             }
         </style>
+        
+    </head>
+    
+    <body>
+
+        <center><h1>Javascript</h1></center>
+        <div class="b">
+            <a href="index3.html">Home</a>
+        </div>
+        <div class="container">
+            <div class="a">
+                <p onclick="f1()" id="demo">Change this content by clicking the button below:</p>
+                <input id="b3" type="button" onclick='f1()' value="Change"></input>
+            </div>
+            <div class="a">
+                <p id="demo2">Let's play Hide and Seek</p>
+                <button type="button" onclick="document.getElementById('demo2').innerHTML= 
+                ''">Hide</button>
+                <button type="button" onclick="document.getElementById('demo2').innerHTML= 
+                'I\'m here!'">Seek</button>
+            </div>
+            <div class="a">
+                <p>Your JS-Number is: <div id="no">???</div></p>
+                <input id="b2" type="button" onclick='f3()' value="View"></input>
+            </div>
+            <div class="a">
+                <p>Enter a number b/w 5 & 10:</p>
+                <input id="in" type="text">
+                <button type="button" onclick="f4()">Test Input</button>
+                <p id="p1"></p>
+            </div>
+        </div>   
+        <div class="container">
+            <div class="a">
+                <input type="button" id="b1" onclick="f2()" value="Date and Time"></input>
+                <p id="demo3"></p>
+            </div>
+            <div class="a">
+                <img id="myImage" src="images/pic_bulboff.gif" style="width:100px">
+                <button onclick="document.getElementById('myImage').src=
+                'images/pic_bulbon.gif'">Switch ON</button>
+                <button onclick="document.getElementById('myImage').src=
+                'images/pic_bulboff.gif'">Switch OFF</button>
+            </div>
+            <div class="a">
+                <center><p>Time</p></center>
+                <h1 id="t"></h1>
+            </div>
+            <div class="a">
+                <p>Wait 3 seconds for the content.</p>
+                <h1 id="d"></h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="a">
+                <p>Enter a number b/w 50 & 100:(validationMessage)</p>
+                <input id="in2" type="number" min="50" max="100" required>
+                <button onclick="f7()">Test Input</button>
+                <p id="c"></p>
+            </div>
+            <div class="a">
+                <p>Count numbers: <output id="r"></output></p>
+                <button onclick="startWorker()">Start</button> 
+                <button onclick="stopWorker()">Stop</button>
+            </div>
+            <div class="a">
+                <button onclick="getLocation()">Show my location</button> 
+                <p id="loc"></p>
+            </div>
+        </div>
+
         <script>
             function f1()
             {
+                demo.innerHTML= "New Content!";
                 var e = document.getElementById("b3");
                 if (e.value=="Change"){
                     e.value = "Change it back";
@@ -107,64 +179,58 @@
             setInterval(f6, 1000);
             function f6() {
             let d = new Date();
-            document.getElementById("t").innerHTML=
-            d.getHours() + ":" +
-            d.getMinutes() + ":" +
-            d.getSeconds();
+            document.getElementById("t").innerHTML = d.toLocaleTimeString();
+            }
+            function f7()
+            {
+                const inpObj = document.getElementById("in2");
+                if (!inpObj.checkValidity()) {
+                    document.getElementById("c").innerHTML = inpObj.validationMessage;
+                } else {
+                    document.getElementById("c").innerHTML = "Input OK";
+                } 
+            }
+            let w;
+            function startWorker() {
+                if(typeof(w) == "undefined") {
+                    w = new Worker("demo_workers.js");
+                }
+                w.onmessage = function(event) {
+                    document.getElementById("r").innerHTML = event.data;
+                };
+            }
+            function stopWorker() { 
+                w.terminate();
+                w = undefined;
+            } 
+            const x = document.getElementById("loc");
+            function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else { 
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+            }
+            function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+            }
+            function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                x.innerHTML = "User denied the request for Geolocation."
+                break;
+                case error.POSITION_UNAVAILABLE:
+                x.innerHTML = "Location information is unavailable."
+                break;
+                case error.TIMEOUT:
+                x.innerHTML = "The request to get user location timed out."
+                break;
+                case error.UNKNOWN_ERROR:
+                x.innerHTML = "An unknown error occurred."
+                break;
+            }
             }
         </script>
-    </head>
-    
-    <body>
-
-        <center><h1>Javascript</h1></center>
-        <div class="b">
-            <a href="index3.html">Home</a>
-        </div>
-        <div class="container">
-            <div class="a">
-                <p id="demo">Change this content by clicking the button below:</p>
-                <input id="b3" type="button" onclick='f1()' value="Change"></input>
-            </div>
-            <div class="a">
-                <p id="demo2">Let's play Hide and Seek</p>
-                <button type="button" onclick="document.getElementById('demo2').innerHTML= 
-                ''">Hide</button>
-                <button type="button" onclick="document.getElementById('demo2').innerHTML= 
-                'I\'m here!'">Seek</button>
-            </div>
-            <div class="a">
-                <p>Your JS-Number is: <div id="no">???</div></p>
-                <input id="b2" type="button" onclick='f3()' value="View"></input>
-            </div>
-            <div class="a">
-                <p>Enter a number b/w 5 & 10:</p>
-                <input id="in" type="text">
-                <button type="button" onclick="f4()">Test Input</button>
-                <p id="p1"></p>
-            </div>
-        </div>   
-        <div class="container">
-            <div class="a">
-                <input type="button" id="b1" onclick="f2()" value="Date and Time"></input>
-                <p id="demo3"></p>
-            </div>
-            <div class="a">
-                <img id="myImage" src="images/pic_bulboff.gif" style="width:100px">
-                <button onclick="document.getElementById('myImage').src=
-                'images/pic_bulbon.gif'">Switch ON</button>
-                <button onclick="document.getElementById('myImage').src=
-                'images/pic_bulboff.gif'">Switch OFF</button>
-            </div>
-            <div class="a">
-                <center><p>Time</p></center>
-                <h1 id="t"></h1>
-            </div>
-            <div class="a">
-                <p>Wait 3 seconds for the content.</p>
-                <h1 id="d"></h1>
-            </div>
-        </div>
     </body>
 
 </html>
