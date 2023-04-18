@@ -78,7 +78,7 @@
 
         <form action="form.php" method="POST" autocomplete="off">
           <div class="form-group">
-            <input type="email" name="email" class="form-control" placeholder="Recepient">
+            <input type="email" name="email" class="form-control" placeholder="Recipient">
           </div>
           <div class="form-group">
             <input type="text" name="subject" class="form-control" placeholder="Subject">
