@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Send Mail from Localhost</title>
@@ -43,7 +43,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 offset-md-4 f">
-        <h2 class="text-center">Send Message</h2>
+        <h2 class="text-center">Send Message</h2>-->
 
         <?php
           if(isset($_POST['send'])){
@@ -76,7 +76,7 @@
           }
         ?>
 
-        <form action="form.php" method="POST" autocomplete="off">
+        <!--<form action="form.php" method="POST" autocomplete="off">
           <div class="form-group">
             <input type="email" name="email" class="form-control" placeholder="Recipient">
           </div>
@@ -93,4 +93,4 @@
       </div>
     </div>
   </div>
-</body>
+</body>-->
