@@ -8,15 +8,15 @@ You can access these easily by following the steps below:
 * Navigate to other webpages by making use of the links and try out the features.
 
 Webpages:
-* index.html: The first webpage I designed. 
-* index2.html: Improved it by using CSS.
-* index3.html(Homepage): Redesigned it using BootStrap.
-* visuals.html: Designed to practice CSS and animations.
-* bootstrap.html: Designed to practice BootStrap.
-* js.html: Designed to practice JavaScript.
-* google.html: Designed the Google Homepage(As on 04-04-2023).
+* index.html: The first webpage I designed for [Percoyo](percoyo.com) technical round.
+* index2.html: Improved it by using CSS
+* index3.html(Homepage): Redesigned it using BootStrap
+* visuals.html: Designed to practice CSS and animations
+* bootstrap.html: Designed to practice BootStrap
+* js.html: Designed to practice JavaScript
+* google.html: Designed the Google Homepage (As on 04-04-2023)
 
 PHP:
 * Contains forms to send mail, receive information of user to Client's mail and Google Sheets.
 
-My learning progress can be tracked here: https://www.w3profile.com/sza619
+My learning progress can be tracked here: [sza619](https://www.w3profile.com/sza619)
