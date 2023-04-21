@@ -17,6 +17,7 @@ Webpages:
 * google.html: Designed the Google Homepage (As on 04-04-2023)
 
 PHP:
+* Requires installation of XAMPP to run the pages on local server.
 * Contains forms to send mail, receive information of user to Client's mail and Google Sheets.
 
 My learning progress can be tracked here: [sza619](https://www.w3profile.com/sza619)
