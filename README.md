@@ -8,7 +8,7 @@ You can access these easily by following the steps below:
 * Navigate to other webpages by making use of the links and try out the features.
 
 Webpages:
-* index.html: The first webpage I designed for [Percoyo](percoyo.com) technical round.
+* index.html: The first webpage I designed for [Percoyo](https://www.percoyo.com/) technical round.
 * index2.html: Improved it by using CSS
 * index3.html(Homepage): Redesigned it using BootStrap
 * visuals.html: Designed to practice CSS and animations
